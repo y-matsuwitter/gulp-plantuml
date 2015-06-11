@@ -1,0 +1,4 @@
+@startuml sample.png
+Foo -> Bar : hoge
+Foo <-- Bar
+@enduml
