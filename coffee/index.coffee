@@ -12,6 +12,9 @@ module.exports = (options = {}) ->
   args = ['-jar']
   args.push options.jarPath ? "plantuml.jar"
   args.push '-p'
+  if options.charset
+    args.push "-charset"
+    args.push options.charset
 
   through.obj (file, encoding, callback) ->
     if file.isNull()
